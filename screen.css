@@ -47,8 +47,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   font-family: sans-serif;
-  color: #2a2a2a; }
+  color: blue; }
+div{ border: 1px black;
 
+}
 a {
   color: #0388a6; }
   a:hover {
@@ -57,6 +59,7 @@ a {
 #main {
   padding: 50px; }
   h1 {
-    font-size: 8em;
-    color: #ff69b4;
+    font-size: 1.67em;
+    color: #6991ff;
   }
+  
