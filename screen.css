@@ -62,4 +62,23 @@ a {
     font-size: 1.67em;
     color: #6991ff;
   }
-  
+  #banner{
+    border: 8px solid blue;
+    height: 50px;
+  }
+  #intro{ text-align: center;
+    color: darkred;
+}
+#content {border: 8px solid red;
+  height: 50px;
+text-align: center;
+color: aqua
+}
+#Top{
+  text-align: center;
+  color: aqua 
+}
+#Bottom {
+  text-align: center;
+  color: darkmagenta
+}
