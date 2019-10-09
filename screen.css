@@ -47,7 +47,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   font-family: sans-serif;
-  color: blue; }
+  color: blue;
+padding-top: 3.5rem; }
 div{ border: 1px black;
 
 }
