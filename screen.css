@@ -63,6 +63,14 @@ a {
     font-size: 1.67em;
     color: #6991ff;
   }
+  h3 {
+    font-style: oblique;
+    color: purple;
+    font-size: x-large;
+    }
+  h2 {
+    color: skyblue;
+  }
   #banner{
     border: 8px solid blue;
     height: 50px;
