@@ -30,11 +30,11 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-  }
+}
   
   nav ul li {
     margin-right: 10px;
-  }
+}
   
   /* Main Content Styles */
   main {
@@ -43,29 +43,48 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
   
   section {
     margin-bottom: 30px;
-  }
+}
   
   section h2 {
     margin-top: 0;
     font-size: 24px;
-  }
+}
   
   section ul li {
     margin-bottom: 5px;
-  }
+}
   
   .project, .job {
     margin-bottom: 20px;
-  }
+}
   
   .project h3, .job h3 {
     margin-top: 0;
     font-size: 20px;
-  }
+}
+
+.image-container {
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
   
   /* Skills Section Styles */
   #skills ul {
