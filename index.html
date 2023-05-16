@@ -12,9 +12,11 @@
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href ="#HTMLstuff">Cool HTML</a></li>
       </ul>
     </nav>
   </header>
@@ -27,7 +29,7 @@
         <li>Email: lucasrouchy1@gmail.com</li>
         <li>Phone: (831) 421-1816</li>
         <li>Github: <a href="https://github.com/lucasrouchy">lucasrouchy</a></li>
-        <li>Linkedin: <a href="https://www.linkedin.com/in/lucasrouchy/">lucasrouchy</a></li>
+        <li>Linkedin: <a href="https://www.linkedin.com/in/lucas-rouchy-868a35249/">lucasrouchy</a></li>
       </ul>
     </section>
 
@@ -83,12 +85,30 @@
             <li>Simplified training environment while keeping randomness through use of random changes to the state of the agent.</li>
           </ul>
         </div>
-      
+        <div class="project">
+          <h3>Ecosystem Simulation</h3>
+          <p>04/2023-05/2023</p>
+          <p>Developed a simulation of an ecosystem with a focus on the predator-prey relationships. The ecosystem is affected by precipitation and temperature. </p>
+          <p>Construction of the simulation was done in C plus plus with a focus on concurrency.</p>
+          <li>Github Repo: <a href="https://github.com/lucasrouchy/Ecosystem_Sim">Ecosystem Simulator</a></li>
+          <img src="image.png" alt="Ecosystem Simulation">
+        </div>
+        
+        <div class="project">
+          <h3>Business Reviews API</h3>
+          <p>03/2023 - present</p>
+          <p>Developed a RESTful API for a business review website. The API is built with Node.js and Express.js. </p>
+          <p>Implemented a MongoDB database to store user and business information. Handling of datapoints is done using Mongoose. </p>
+          <p>The whole application is dockerized allowing for anyone to run the server with one command regardless of their environment. </p>
+          <li>Github Repo: <a href="https://github.com/lucasrouchy/express-js-server">Business Reviews API</a></li> 
+        </div>
+
         <div class="project">
           <h3>Terminal Simulator and Memory Allocator</h3>
           <p>01/2022 - 02/2022</p>
           <p>Developed an efficient command-line simulator through a test-driven development process. Replicated standard commands such as cd, rm, mkdir, nano, touch, cp, mv, and more.</p>
           <p>Introduced commands: myalloc and free to allocate and free memory space. Development was done in C.</p>
+          <li>Github Repo: <a href="https://github.com/lucasrouchy/CoalescingMemory">Terminal Simulator</a></li>
         </div>
       
         <div class="project">
@@ -97,6 +117,7 @@
           <p>Program started as a population generator for the US with an Object-Oriented approach. Generator uses US census data over 10 years to feed the program.</p>
           <p>Designed a geolocation content generator to create related pieces of content specific to user’s input. Content generator required implementing an interactive GUI.</p>
           <p>These programs ran in parallel using multiprocessing techniques. Development was done in Python.</p>
+          <li>Github Repo: <a href="https://github.com/lucasrouchy/MultiProcess-Generator">Multiprocess Generator</a></li>
         </div>
     </section>
       
@@ -139,6 +160,23 @@
           <li>PyTorch</li>
           <li>Threading</li>
         </ul>
+    </section>
+
+    <section id="HTMLstuff" >
+      <div id="solar-system">
+        <div class="sun"></div>
+        <div class="planet earth">
+          <div class="moon"></div>
+        </div>
+        <div class="planet mars"></div>
+        <!-- Add more planets if desired -->
+        <div class="spaceship"></div>
+        <!-- Shooting Stars -->
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <!-- Add more shooting stars if desired -->
+      </div>
     </section>
   </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -72,5 +72,122 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-  }
+}
+
+#solar-system {
+    background-color: #000;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin: 50px auto;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+}
+  
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+}
+
+.sun {
+    width: 80px;
+    height: 80px;
+    background-color: #FDB813;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    animation: rotate 20s linear infinite;
+}
+
+.earth {
+    width: 30px;
+    height: 30px;
+    background-color: #4D7DF6;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    animation: orbit-earth 10s linear infinite;
+}
+
+.mars {
+    width: 20px;
+    height: 20px;
+    background-color: #FF4F4F;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    animation: orbit-mars 15s linear infinite;
+}
+
+.moon {
+    width: 10px;
+    height: 10px;
+    background-color: #DDD;
+    top: calc(50% - 5px);
+    left: calc(50% + 30px);
+    animation: orbit-moon 5s linear infinite;
+}
+
+.spaceship {
+    width: 50px;
+    height: 20px;
+    background-color: #FFF;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% + 90px);
+    transform-origin: bottom center;
+    animation: fly-around 8s linear infinite;
+}
+
+.shooting-star {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background-image: url('shootingstar.png'); /* Replace with your own image */
+    background-color: #000;
+    animation: shooting-star 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes orbit-earth {
+    0% {
+      transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+@keyframes orbit-mars {
+    0% {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+@keyframes orbit-moon {
+    0% {
+      transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+@keyframes fly-around {
+    0% {
+      transform: rotate(0deg) translateX(90px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(90px) rotate(-360deg);
+    }
+}
+
   
