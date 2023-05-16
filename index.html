@@ -1,118 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Lucas' Portfolio</title>
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="screen.css" rel="stylesheet">
-    <script src="main.js"></script>
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-          </li>
-          
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="https://lucasrouchy.github.io/zagster-client/"> Zagster Project</a>
-              <a class="dropdown-item" href="#">Snapchat Project</a>
-              <a class="dropdown-item" href="#">Ski Project</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Rouchy - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Lucas Rouchy</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <main role="main">
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Enthusiastic developer passionate about software engineering and Machine Learning. Focused on finding efficient paths to maintainable software through established designs, teamwork, test-driven development, and solid judgment.</p>
+      <ul>
+        <li>Email: lucasrouchy1@gmail.com</li>
+        <li>Phone: (831) 421-1816</li>
+        <li>Github: <a href="https://github.com/lucasrouchy">lucasrouchy</a></li>
+        <li>Linkedin: <a href="https://www.linkedin.com/in/lucasrouchy/">lucasrouchy</a></li>
+      </ul>
+    </section>
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 id="mainHeader"  class="display-3">Lucas Rouchy</h1>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>B.S. in Computer Science; focus in Software Engineering</li>
+        <li>Anticipated Graduation: 06/2023</li>
+        <li>Oregon State University-Cascades, Bend, OR</li>
+        <li>GPA: 3.35, Dean’s list 2022</li>
+      </ul>
+      <p>Relevant Coursework:</p>
+      <ul>
+        <li>Operating Systems</li>
+        <li>Software Engineering</li>
+        <li>Computer Architecture and Assembly Language</li>
+        <li>Data Structures</li>
+        <li>Analysis of Algorithms</li>
+        <li>Web Development</li>
+        <li>Databases</li>
+        <li>Machine Learning and Data Mining</li>
+        <li>Computer Networks</li>
+        <li>Software Development</li>
+        <li>Discrete Math</li>
+        <li>Statistics for Engineers</li>
+        <li>Differential Calculus</li>
+        <li>Usability Engineering</li>
+        <li>Network Security</li>
+        <li>Mobile Software Development</li>
+        <li>Computer Graphics Shaders</li>
+      </ul>
+      <p>Related Clubs:</p>
+      <ul>
+        <li>Hacker Refactor</li>
+        <li>AI Club</li>
+        <li>Global Formula Racing Club</li>
+        <li>Ski Club</li>
+      </ul>
+    </section>
 
-          <p>I am a 17 year old computer science student at OSU Cascades and this is my portfolio</p>
-
-          <p><a class="btn btn-primary btn-lg" href="Resume-7.pdf" role="button">Resume &raquo;</a></p>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Reinforced Learning Based Controls and Planning</h3>
+          <p>09/2022 - Present</p>
+          <p>OSU Global Formula Racing Team - FSAE</p>
+          <p>This project aims to implement a deep reinforcement learning policy using camera and LIDAR data to discover our inputs and produce safe outputs for steering and throttle actuators.</p>
+          <ul>
+            <li>Implemented a distributed training model using the Ray package.</li>
+            <li>Integrated the distributed model into our PyTorch implementation.</li>
+            <li>Documented each progression for future teammates and to ensure maintainability.</li>
+            <li>Constructed a new two-layer reward policy with colleagues, improving simulated track performance by over 300%.</li>
+            <li>Simplified training environment while keeping randomness through use of random changes to the state of the agent.</li>
+          </ul>
         </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Github</h2>
-            <p>Find me on Github </p>
-            <p><a class="btn btn-secondary" href="https://github.com/lucasrouchy" role="button">go there &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Stackoverflow</h2>
-            <p>This is my stackoverflow </p>
-            <p><a class="btn btn-secondary" href="https://stackoverflow.com/users/12155223/lucasstayshydrated?tab=profile" role="button">go there &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Data Visualization</h2>
-            <p>My Zagster Project </p>
-            <p><a class="btn btn-secondary" href="https://lucasrouchy.github.io/zagster-client/" role="button">go there &raquo;</a></p>
-          </div>
-        </div>
-
-        <hr>
-
-      </div> <!-- /container -->
-
-      <style>
-        body {
-          padding: 100px;
-        background-image: url(https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg)
-        }
-        </style>
-      <body class="index">
-        <div id="banner" role="banner">
-            <h1 id="intro">Ski Season 19/20</h1>
-           </div>
-           <h2 id="Top">This is where I will post the ski edits I make this year</h2>
-           <h3 id="Bottom">PRAY FOR SNOW </h3>
-           <div id="content" >
-           
-      </div>
-     
-        
-       </body>
       
-    </main>
-
-    <footer class="container">
-      <p>&copy; Company since forever</p>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        <div class="project">
+          <h3>Terminal Simulator and Memory Allocator</h3>
+          <p>01/2022 - 02/2022</p>
+          <p>Developed an efficient command-line simulator through a test-driven development process. Replicated standard commands such as cd, rm, mkdir, nano, touch, cp, mv, and more.</p>
+          <p>Introduced commands: myalloc and free to allocate and free memory space. Development was done in C.</p>
+        </div>
+      
+        <div class="project">
+          <h3>Multiprocess Generator</h3>
+          <p>02/2021 - 02/2022</p>
+          <p>Program started as a population generator for the US with an Object-Oriented approach. Generator uses US census data over 10 years to feed the program.</p>
+          <p>Designed a geolocation content generator to create related pieces of content specific to user’s input. Content generator required implementing an interactive GUI.</p>
+          <p>These programs ran in parallel using multiprocessing techniques. Development was done in Python.</p>
+        </div>
+    </section>
+      
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+          <h3>Social Media and Communications Coordinator</h3>
+          <p>11/2019 - 06/2020</p>
+          <p>Oregon State University-Cascades, Bend, OR</p>
+          <ul>
+            <li>Collected, analyzed, and updated information in Excel: increased database coverage over 30x.</li>
+            <li>Designed an advertising campaign for Snapchat: achieved a 33% engagement rating.</li>
+            <li>Conducted interviews and produced stories to highlight student success and market programs on the OSU website.</li>
+            <li>Increased website coverage by 30% and communicated progress regularly with the director of communications.</li>
+          </ul>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>C and C++</li>
+          <li>Python</li>
+          <li>Ruby</li>
+          <li>CUDA</li>
+          <li>Multiprocessing</li>
+          <li>PHP and CSS</li>
+          <li>HTML</li>
+          <li>Java and JavaScript</li>
+          <li>Pandas and Numpy</li>
+          <li>Bash</li>
+          <li>Raku/Perl</li>
+          <li>Flutter</li>
+          <li>SQL and NoSQL</li>
+          <li>TensorFlow</li>
+          <li>ROS/ROS2</li>
+          <li>HDL</li>
+          <li>Swift</li>
+          <li>HPC experience</li>
+          <li>PyTorch</li>
+          <li>Threading</li>
+        </ul>
+    </section>
+  </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-</html>
+</body>
+</html>      
+      
