@@ -251,15 +251,15 @@ body {
     border-radius: 50%;
     overflow: hidden;
     animation: orbit-moon 5s linear infinite;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    z-index: -1;
 }
 .moon:before {
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-color: #DDD;
@@ -316,9 +316,11 @@ body {
     left: -20px;
     width: 40px;
     height: 40px;
-    /* background-image: url('shootingstar.png');  */
+    background-image: url('shootingstar.png'); 
     background-color: #ffffff00;
     animation: shooting-star 5s linear infinite;
+    filter: brightness(200%);
+    opacity: 0;
 }
 
 @keyframes rotate {
@@ -367,13 +369,346 @@ body {
     transform: translate(0, 0);
     opacity: 0;
   }
-  50% {
-    transform: translate(150vw, 150vh);
-    opacity: 1;
+  20% {
+    opacity: 1; /* Fade-in effect */
+  }
+  70% {
+    opacity: 1; /* Maintain visibility */
   }
   100% {
     transform: translate(300vw, 300vh);
     opacity: 0;
+  }
+}
+
+
+.car {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(f1.jpg); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 480px; /* Adjust starting position */
+    left: 290px; /* Adjust starting position */
+    transform: translate(-50%, -50%);
+}
+.track {
+  position: relative;
+  width: 800px;
+  height: 520px;
+  background-color: #9b9b9b;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.inner-track {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 700px;
+  height: 420px;
+  background-color: #767676;
+}
+
+.checkpoint {
+  position: absolute;
+  background-color: #007bff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start {
+  top: 220px;
+  left: 100px;
+}
+
+.sainte-devote {
+  top: 195px;
+  left: 220px;
+}
+
+.beau-rivage {
+  top: 170px;
+  left: 380px;
+}
+
+.massenet {
+  top: 160px;
+  left: 500px;
+}
+
+.casino-square {
+  top: 185px;
+  left: 600px;
+}
+
+.mirabeau {
+  top: 235px;
+  left: 650px;
+}
+
+.tabac {
+  top: 310px;
+  left: 640px;
+}
+
+.swimming-pool {
+  top: 370px;
+  left: 570px;
+}
+
+.la-rascasse {
+  top: 420px;
+  left: 440px;
+}
+
+.antony-noghes {
+  top: 435px;
+  left: 290px;
+}
+  
+
+@keyframes carMove {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(400px, 250px) rotate(15deg);
+  }
+  40% {
+    transform: translate(540px, 270px) rotate(30deg);
+  }
+  60% {
+    transform: translate(620px, 320px) rotate(45deg);
+  }
+  100% {
+    transform: translate(700px, 380px) rotate(90deg);
+  }
+}
+@keyframes carMove2 {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20%{
+    transform: translate(100px, 40px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 120px) rotate(25deg);
+  }
+  100% {
+    transform: translate(400px, 170px) rotate(45deg) 
+  }
+}
+
+@keyframes carMove3 {
+  0% {
+    transform: translate(0px, 0px) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+
+/* Car 4 */
+@keyframes carMove4 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+@keyframes carMove5 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+@keyframes carMove6 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+@keyframes carMove7 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+@keyframes carMove8 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+@keyframes carMove9 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20%{
+    transform: translate(100px, 140px) rotate(15deg);
+  }
+  40%{
+    transform: translate(200px, 80px) rotate(20deg);
+  }
+  60%{
+    transform: translate(300px, 220px) rotate(25deg);
+  }
+  100% {
+    transform: translate(360px, 370px) rotate(45deg) 
+  }
+}
+@keyframes carMove10 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(50px, 100px) rotate(45deg)
+  }
+}
+@keyframes carMove11 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(5px, 0) rotate(5deg)
+  }
+  20% {
+    transform: translate(10px, 0) rotate(10deg)
+  }
+  30% {
+    transform: translate(15px, 0) rotate(15deg)
+  }
+  40% {
+    transform: translate(20, 0) rotate(20deg)
+  }
+  50% {
+    transform: translate(25px, 0) rotate(25deg)
+  }
+  60% {
+    transform: translate(30px, 0) rotate(30deg)
+  }
+  70% {
+    transform: translate(35px, 0) rotate(35deg)
+  }
+  100% {
+    transform: translate(50px, 0) rotate(45deg)
+  }
+}
+@keyframes carMove12 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(50px, 0) rotate(45deg)
+  }
+}
+@keyframes carMove13 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+@keyframes carMove14 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+@keyframes carMove15 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+@keyframes carMove16 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+@keyframes carMove17 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+@keyframes carMove18 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(140px);
   }
 }
 
