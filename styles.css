@@ -386,20 +386,25 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-image: url(f1.jpg); 
+    background-image: url(f1.png); 
     background-repeat: no-repeat;
     background-size: contain;
-    top: 480px; /* Adjust starting position */
-    left: 290px; /* Adjust starting position */
-    transform: translate(-50%, -50%);
+    top: 40px; /* Adjust starting position */
+    left: 150px; /* Adjust starting position */
+    
 }
 .track {
   position: relative;
-  width: 800px;
-  height: 520px;
+  width: 810px;
+  height: 500px;
+  background-image: url(monaco.png);
+  background-size: cover;
+  background-position: center center;
   background-color: #9b9b9b;
   border: 2px solid #000;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .inner-track {
@@ -408,7 +413,7 @@ body {
   left: 50px;
   width: 700px;
   height: 420px;
-  background-color: #767676;
+  background-color: transparent;
 }
 
 .checkpoint {
