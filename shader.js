@@ -1,35 +1,5 @@
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas1');
 const gl = canvas.getContext('webgl');
-
-// Utility functions to create shaders and program
-function createShader(gl, type, source) {
-  const shader = gl.createShader(type);
-  gl.shaderSource(shader, source);
-  gl.compileShader(shader);
-
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    console.error('Error compiling shader:', gl.getShaderInfoLog(shader));
-    gl.deleteShader(shader);
-    return null;
-  }
-
-  return shader;
-}
-
-function createProgram(gl, vertexShader, fragmentShader) {
-  const program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    console.error('Error linking program:', gl.getProgramInfoLog(program));
-    gl.deleteProgram(program);
-    return null;
-  }
-
-  return program;
-}
 
 // Vertex shader
 const vertexShaderSource = `
@@ -43,6 +13,7 @@ uniform vec2 gravity;
 uniform float maxLife;
 
 varying vec3 vColor;
+varying float vAlpha; // Added varying variable for alpha value
 
 void main() {
   vec2 newPosition = position + velocity * deltaTime + 0.5 * gravity * deltaTime * deltaTime;
@@ -59,6 +30,10 @@ void main() {
 
   gl_Position = vec4(clampedPosition, 0.0, 1.0);
   gl_PointSize = 2.0;
+
+  // Apply alpha based on particle life
+  vAlpha = 1.0 - (newLife / maxLife);
+
   vColor = color;
 }
 `;
@@ -68,9 +43,11 @@ const fragmentShaderSource = `
 precision mediump float;
 
 varying vec3 vColor;
+varying float vAlpha;
 
 void main() {
-  gl_FragColor = vec4(vColor, 0.6);
+  // Apply alpha to fragment color
+  gl_FragColor = vec4(vColor, vAlpha);
 }
 `;
 
@@ -96,7 +73,7 @@ gl.enableVertexAttribArray(velocityAttributeLocation);
 gl.enableVertexAttribArray(lifeAttributeLocation);
 
 // Create particle data
-const particleCount = 1000;
+const particleCount = 10000;
 const particles = [];
 
 for (let i = 0; i < particleCount; i++) {
@@ -194,6 +171,33 @@ function render(currentTime) {
   animationRequestId = requestAnimationFrame(render);
 }
 
+function triggerExplosion() {
+  particles.forEach(particle => {
+    particle.position = [0, 0];
+
+    // Generate random angle and speed for particle
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 0.04 + 0.01; // Adjust the speed range here
+
+    // Calculate velocity based on angle and speed
+    const velocity = [Math.cos(angle) * speed, Math.sin(angle) * speed];
+
+    particle.velocity = velocity;
+    particle.life = 0.0;
+  });
+}
+
+function handleMouseClick(event) {
+  const rect = canvas.getBoundingClientRect();
+  const clickX = event.clientX - rect.left;
+  const clickY = canvas.height - (event.clientY - rect.top);
+
+  // Check if the click is within the canvas boundaries
+  if (clickX >= 0 && clickX <= canvas.width && clickY >= 0 && clickY <= canvas.height) {
+    triggerExplosion();
+  }
+}
+
 // Start the animation
 function startAnimation() {
   stopAnimation();
@@ -207,6 +211,8 @@ function stopAnimation() {
 
 // Resize the canvas when the window is resized
 window.addEventListener('resize', resizeCanvas);
+
+canvas.addEventListener('click', handleMouseClick);
 
 // Initial call to resize the canvas
 resizeCanvas();
